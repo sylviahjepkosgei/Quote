@@ -1,0 +1,24 @@
+<div class="container">SHARING IS CARING 
+  <h1>COMPUTING QUOTES<br>the best site to share your cool programming quotes<br></h1>
+  
+  <p>Programming Quotes</p>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes;let i = index'>
+        <li>{{quote.quote}}</li>
+          <h6 id={{i}} appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h6>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)' (isLiked)="isLikedClicked($event,i)">
+          </app-quote-detail>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
+
+
+  <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+</div>
