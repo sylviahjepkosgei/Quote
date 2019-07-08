@@ -15,13 +15,13 @@ export class QuoteDetailComponent implements OnInit {
   @Output() isLiked=new EventEmitter<boolean>();
   @Output() isUnLiked=new EventEmitter<boolean>();
 
-  upVote(liked:boolean){
-    this.isLiked.emit(liked);
+  // upVote(liked:boolean){
+  //   this.isLiked.emit(liked);
     
-  }
-  downVote(unliked:boolean){
-    this.isUnLiked.emit(unliked);
-  }
+  // }
+  // downVote(unliked:boolean){
+  //   this.isUnLiked.emit(unliked);
+  // }
   quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
