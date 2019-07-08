@@ -8,7 +8,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'Brian Kernigan', 'Controlling complexity is the essence of computer programming', new Date(2019, 3, 14)),
+    new Quote(1, 'Brian Kernigan', 'Controlling complexity is the essence of computer programming', new Date(2019, 3,1)),
     new Quote(2, 'John Johnson', 'First solve the problem then write the code', new Date(2019, 6, 9)),
     new Quote(3, 'Francis Glassborows', 'Good programmers use their brains but good guidelines save us having to think out every case', new Date(2019, 1, 12)),
 
