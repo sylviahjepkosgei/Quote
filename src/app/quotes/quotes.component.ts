@@ -47,6 +47,12 @@ export class QuoteComponent implements OnInit {
       this.quotes[i].upvote+=1;
     }
   }
+    isUnLikedClicked(liked:boolean,i){
+      if(liked){
+        this.quotes[i].downvote+=1;
+      }
+    }
+  
   formReceive(quote) {
    this.quotes.push(quote);
  }
