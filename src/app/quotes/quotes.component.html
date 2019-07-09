@@ -8,8 +8,8 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes;let i = index'>
         <li>{{quote.quote}}</li>
-          <h6 id={{i}} appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h6>
-          <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+          <h6 id={{i}} >{{quote.name}}</h6>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">Show Quote</button>
           <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)' (isLiked)="isLikedClicked($event,i)">
           </app-quote-detail>
       </div>
